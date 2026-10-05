@@ -1,0 +1,14 @@
+Problem
+We need to merge two sorted linked lists into one sorted list.
+ 
+Approach
+I compare the current nodes of both lists and add the smaller node to the result. I continue until one list becomes empty, then I add the remaining nodes.
+
+Time Complexity
+Time Complexity: O(n + m)
+Each node from both lists is checked only once.
+Space Complexity: O(1)
+I only use pointers and reuse the existing nodes.
+
+Reflection / Improvement
+There is no faster approach because we need to check the nodes from both lists. The current solution already has optimal time and space complexity.
