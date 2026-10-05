@@ -1,0 +1,16 @@
+Problem
+We need to check if a linked list contains a cycle and return `true` if a node can be reached again.
+
+Approach
+I store the visited nodes in a `HashSet`. Before moving to the next node, I check if it was already visited. If it was visited, there is a cycle. If I reach `null`, there is no cycle.
+
+Time Complexity
+Time Complexity: O(n)
+Each node is checked only once.
+Space Complexity: O(n)
+The `HashSet` can store all nodes in the list.
+
+Reflection / Improvement
+A more efficient approach is to use two pointers, slow and fast. This would reduce the space complexity to **O(1)** while keeping the time complexity **O(n)**.
+
+This solution is simple and easy to understand, and it correctly detects whether the linked list contains a cycle.
