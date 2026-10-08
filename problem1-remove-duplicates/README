@@ -1,0 +1,66 @@
+
+
+The linked list is sorted. The task is to remove duplicate values so that every value appears only once.
+
+For example:
+
+1 → 1 → 2 → 3 → 3
+
+should become:
+
+1 → 2 → 3
+
+
+
+I used one pointer called `current`.
+
+Because the list is sorted, duplicate values are next to each other. I compare the current node with the next node.
+
+If they have the same value, I skip the next node:
+
+current.next = current.next.next
+
+If the values are different, I move to the next node.
+
+
+
+For:
+
+1 → 1 → 2 → 3 → 3
+
+First, I compare 1 and 1. They are equal, so I remove the second 1.
+
+1 → 2 → 3 → 3
+
+Then I compare 1 and 2. They are different, so I move forward.
+
+Then I compare 2 and 3.
+
+Finally, I find two 3s and remove the second one.
+
+The result is:
+
+1 → 2 → 3
+
+
+At first, I thought I needed to create a new linked list and copy only unique values.
+
+This would work, but it would require extra memory.
+
+Then I realized that because the list is sorted, I can simply change the `next` pointer and skip duplicate nodes.
+
+
+
+Time Complexity: O(n)
+
+The algorithm goes through the linked list once. Therefore, if there are n nodes, the number of operations grows linearly with n.
+
+Space Complexity: O(1)
+
+I only use one extra pointer, so the additional memory does not depend on the size of the list.
+
+
+
+The solution is already efficient because it uses O(n) time and O(1) extra space.
+
+There is no better asymptotic time complexity than O(n), because we need to check the nodes of the list at least once.
