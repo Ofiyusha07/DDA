@@ -1,0 +1,57 @@
+
+
+The task is to remove every node whose value is equal to the given value.
+
+For example:
+
+1 → 2 → 6 → 3 → 6
+
+with val = 6 becomes:
+
+1 → 2 → 3
+
+
+
+First, I remove matching nodes from the beginning of the list.
+
+Then I use a pointer called `current` to check the rest of the list.
+
+I check `current.next` instead of `current`, because this allows me to skip a node by changing the `next` pointer.
+
+
+For:
+
+1 → 2 → 6 → 3 → 6
+
+and:
+
+val = 6
+
+The first two values are not 6, so I move forward.
+
+Then I find 6:
+
+1 → 2 → 6 → 3 → 6
+
+I skip this node:
+
+1 → 2 → 3 → 6
+
+Finally, I find the last 6 and skip it:
+
+1 → 2 → 3
+
+
+Time Complexity: O(n)
+
+I go through the linked list once, so the number of operations grows linearly with the number of nodes.
+
+Space Complexity: O(1)
+
+Only a few pointer variables are used.
+
+
+
+The solution already has O(n) time and O(1) extra space.
+
+It is difficult to improve the asymptotic complexity because every node may need to be checked.
