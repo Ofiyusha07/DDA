@@ -1,0 +1,76 @@
+
+The task is to determine whether a linked list reads the same from left to right and from right to left.
+
+For example:
+
+1 → 2 → 2 → 1
+
+is a palindrome.
+
+But:
+
+1 → 2 → 3
+
+is not a palindrome.
+
+
+I first copy all values from the linked list into an ArrayList.
+
+Then I use two indexes:
+
+- `left` starts from the beginning.
+- `right` starts from the end.
+
+I compare the values at these positions.
+
+If they are different, the list is not a palindrome.
+
+If all pairs are equal, the list is a palindrome.
+
+
+
+For:
+
+1 → 2 → 2 → 1
+
+I first create:
+
+[1, 2, 2, 1]
+
+Then:
+
+left = 0, right = 3
+
+1 == 1
+
+Next:
+
+left = 1, right = 2
+
+2 == 2
+
+All pairs are equal, so the result is true.
+
+
+
+Time Complexity: O(n)
+
+First, I go through all n nodes to copy their values.
+
+Then I check approximately n/2 pairs.
+
+O(n) + O(n/2) is still O(n).
+
+Space Complexity: O(n)
+
+I store all values of the linked list in an ArrayList.
+
+
+
+There is a more memory-efficient solution.
+
+Instead of storing all values, I can find the middle of the linked list, reverse the second half, and compare the two halves.
+
+This would reduce the extra space from O(n) to O(1), while keeping O(n) time.
+
+The main change would be reversing the second half of the linked list instead of creating an ArrayList.
