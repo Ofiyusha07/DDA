@@ -1,0 +1,29 @@
+
+
+The task is to sort a linked list in ascending order.
+
+
+I used Merge Sort. First, I find the middle of the list using two pointers: `slow` moves one step at a time, while `fast` moves two steps.
+
+When `fast` reaches the end, `slow` is near the middle. I split the list into two parts, sort each part recursively, and merge the sorted parts.
+
+First, I split the list, then I split it into smaller lists, each list with one node is already sorted. Next, I merge the smaller lists, finally, I merge them.
+
+
+Sorting a linked list is different from sorting an array because linked lists do not have direct index access.
+
+I first needed to understand how to find the middle and split the list without losing the connection between nodes. The `slow` and `fast` pointers help find the middle, and setting `previous.next = null` separates the two halves.
+
+
+**Time Complexity: O(n log n)**
+
+Each level of recursion splits the list into smaller parts. There are approximately `log n` levels, and merging across each level processes `n` nodes. Therefore, the total time complexity is `O(n log n)`.
+
+**Space Complexity: O(log n)**
+
+The recursive calls use a stack. Since the list is divided approximately in half at each step, the recursion depth is `O(log n)`. The merge operation itself reuses existing nodes instead of creating a new node for every element, apart from a temporary dummy node.
+
+
+Merge Sort is a good choice for linked lists because it does not require random access to elements.
+
+An iterative bottom-up Merge Sort could avoid recursive calls and reduce auxiliary stack space to `O(1)`, while keeping `O(n log n)` time.
