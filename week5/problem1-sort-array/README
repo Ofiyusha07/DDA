@@ -1,0 +1,51 @@
+
+The task is to sort an integer array in ascending order.
+
+For example:
+
+Input: `[5, 2, 3, 1]`
+
+Output: `[1, 2, 3, 5]`
+
+
+I used Merge Sort. The algorithm divides the array into two smaller parts until each part contains one element. Then it merges the parts in sorted order.
+
+
+Input:
+
+`[5, 2, 3, 1]`
+
+First, I divide the array:
+
+`[5, 2]` and `[3, 1]`
+
+Then I divide again:
+
+`[5] [2] [3] [1]`
+
+Now I merge the single-element arrays in sorted order:
+
+`[2, 5]` and `[1, 3]`
+
+Finally, I merge them:
+
+`[1, 2, 3, 5]`
+
+
+At first, sorting the array by comparing every pair seemed easier. However, that approach would require more operations for large arrays.
+
+I chose Merge Sort because dividing the array into smaller parts makes sorting more efficient.
+
+
+**Time Complexity: O(n log n)**
+
+The array is divided into approximately `log n` levels. At each level, merging processes all `n` elements. Therefore, the total time complexity is `O(n log n)`.
+
+**Space Complexity: O(n)**
+
+Temporary arrays are created while dividing and merging the elements.
+
+
+Merge Sort is already efficient for general sorting. Its time complexity is `O(n log n)`.
+
+The implementation could be improved by reusing one temporary array instead of creating new arrays at every recursive call. This would reduce repeated memory allocations while keeping the same time complexity.
