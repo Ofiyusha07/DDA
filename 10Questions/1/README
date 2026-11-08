@@ -1,0 +1,14 @@
+How it works:
+- Create a list called `result` to store the values.
+- If a node is `null`, terminate the recursion.
+- First, visit the left subtree.
+- Add the value of the current node.
+- Then, visit the right subtree.
+- Return the final list.
+Time Complexity: O(n)
+
+Each node in the tree is visited exactly once. If the tree contains `n` nodes, the algorithm must process all `n` of them.
+
+Space Complexity: O(n) in the worst case, accounting for both the result list and the recursion stack.
+
+Possible improvement: An iterative approach using a stack can be used instead of recursion. However, the asymptotic time complexity will remain O(n).
