@@ -1,0 +1,13 @@
+- Create a list to store the values.
+- If the current node is null, terminate the recursion.
+- First, add the value of the current node.
+- Then, visit the left subtree.
+- After that, visit the right subtree.
+- Return the list.
+Time Complexity: O(n)
+
+Each node is processed exactly once, so the time complexity depends on the total number of nodes.
+
+Space Complexity: O(n) in the worst case, accounting for both the list and the recursion stack.
+
+You could use a stack and an iterative DFS approach. However, the asymptotic time complexity will remain O(n).
