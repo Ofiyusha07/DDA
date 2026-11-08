@@ -1,0 +1,12 @@
+- If the tree is empty, return 0.
+- If there is no left child, check only the right subtree.
+- If there is no right child, check only the left subtree.
+- If both children exist, choose the smaller depth.
+You cannot simply use `Math.min()` for the two subtrees, because a missing child would return 0, leading to an incorrect result.
+
+Time Complexity: O(n)
+
+In the worst case, the algorithm visits each node in the tree once, so the number of operations is proportional to the number of nodes.
+
+Space Complexity: O(h) — the recursion stack depends on the height of the tree.
+ You can use BFS (Breadth-First Search). It traverses the tree level by level and stops as soon as the first leaf node is encountered.
