@@ -1,0 +1,11 @@
+- If the tree is empty, return 0.
+- Recursively find the depth of the left subtree.
+- Then, find the depth of the right subtree.
+- Compare both depths using Math.max().
+- Add 1 for the current node.
+Time Complexity: O(n)
+
+Each node is visited once. To determine the maximum depth, all nodes in the tree must be checked.
+
+Space Complexity: O(h), where h is the height of the tree. This space is used by the recursion stack.
+For a balanced tree, the recursion depth is O(log n); however, the O(n) time complexity cannot be improved, as the entire tree must be examined.
