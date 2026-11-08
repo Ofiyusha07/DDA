@@ -1,0 +1,12 @@
+- If the tree is empty, return false.
+- Check whether the current node is a leaf.
+- If it is a leaf, compare its value with the remaining sum.
+- Subtract the current nodes value from `targetSum`.
+- Check the left and right subtrees.
+- If at least one path matches, return true.
+Time Complexity: O(n)
+
+In the worst case, all nodes in the tree must be checked if no suitable path exists.
+
+Space Complexity: O(h) — the maximum depth of the recursion stack.
+ An iterative DFS using a stack could be used, but the time complexity would remain O(n).
