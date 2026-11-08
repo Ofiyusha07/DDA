@@ -1,0 +1,5 @@
+If the tree is empty, return null.Create a temporary variable `temp`.Store the left node.Swap the left and right nodes.Recursively repeat the operation for both subtrees.Return the modified tree.
+Time Complexity: O(n)
+Each node is visited once, and a constant number of operations is performed for each: swapping two references and making two recursive calls.
+Space Complexity: O(h) — the recursion stack depends on the height of the tree.
+You could use BFS with a queue or iterative DFS with a stack. The time complexity will remain O(n).
