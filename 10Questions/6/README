@@ -1,0 +1,13 @@
+- Create a list for the results.
+- Check if the current node exists.
+- Process the left subtree first.
+- Then, process the right subtree.
+- Only after that, add the value of the current node.
+- Return the list.
+Time Complexity: O(n)
+
+The algorithm visits each node exactly once. Therefore, it requires O(n) time for n nodes.
+
+Space Complexity: O(n) in the worst case, accounting for the result list and the recursion stack.
+
+Possible improvement: An iterative solution can be implemented using a stack. However, the time complexity will remain O(n).
