@@ -1,0 +1,14 @@
+- Create a list called `result` to store the paths.
+- If the tree is empty, return an empty list.
+- Pass the current node and the `path` string into a recursive method.
+- Append the nodes value to the path.
+- If the path already contains values, add a separator (`->`).
+- If the node is a leaf, save the completed path.
+- Otherwise, continue the search in the left and right subtrees.
+Time Complexity: O(n · h)
+
+Each node is visited once; however, when constructing the string, the existing path—which can be up to O(h) in length—may be copied. Consequently, the worst-case complexity is O(n · h).
+
+Space Complexity: O(n · h) in the worst case, accounting for the stored path strings and the recursion stack.
+
+Possible improvement: You could use a `StringBuilder` to construct the paths, reverting changes after each recursive call. This would reduce the number of temporary strings created and minimize unnecessary copying.
