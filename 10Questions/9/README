@@ -1,0 +1,12 @@
+- If the tree is empty, return 0.
+- Create a variable `sum`.
+- Check if a left child exists.
+- If the left child has no children, it is a left leaf; add its value to the sum.
+- If it is not a leaf, recursively check its subtree.
+- Also, check the right subtree, as it may also contain left leaves.
+- Return the total sum.
+Time Complexity: O(n)
+In the worst case, we visit each node of the tree once. A constant number of checks is performed for each node.
+
+Space Complexity: O(h) — due to the recursion stack.
+ An iterative solution can be implemented using a stack or a queue. However, the time complexity will remain O(n).
