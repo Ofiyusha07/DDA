@@ -1,0 +1,12 @@
+- If the first node is empty, return the second node.
+- If the second node is empty, return the first.
+- If both nodes exist, add their values ​​together.
+- Recursively merge the left subtrees.
+- Then, merge the right subtrees.
+- Return the merged tree.
+Time Complexity: O(min(n, m))
+
+Where n and m are the number of nodes in the first and second trees, respectively. We only process positions where both trees have nodes. In the worst case, the time complexity is O(min(n, m)).
+
+Space Complexity: O(min(h1, h2)) — the recursion stack depends on the depth of the overlapping subtrees.
+ An iterative approach using a queue could be used; however, the recursive solution is already sufficiently simple and efficient.
