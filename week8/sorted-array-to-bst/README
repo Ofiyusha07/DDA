@@ -1,0 +1,23 @@
+The tree must be height-balanced. This means that the left and right subtrees should have almost the same height.
+
+I used recursion to build the tree.
+First, I find the middle element of the array. I use it as the root. Then I repeat the same process:
+Elements on the left become the left subtree. Elements on the right become the right subtree. I find the middle element of each part and create new nodes.
+
+I stop when there are no elements left.
+The main challenge was understanding how to choose the root.
+If I always choose the first element, the tree can become unbalanced.
+I learned that choosing the middle element helps create a balanced tree.
+Another challenge was understanding the recursive calls. Each call works with a smaller part of the array.
+
+Time Complexity: O(n)
+Every element from the array is used once to create a tree node.
+If there are n elements, the algorithm creates n nodes.
+Space Complexity: O(log n)
+The recursion stack uses space depending on the height of the tree.
+Because the tree is balanced, its height is approximately log n.
+The output tree itself also takes O(n) space, but this is not included in the auxiliary space complexity.
+
+I use the middle element to create a balanced tree.
+The time complexity is O(n), which is optimal because every element must be used.
+There is no need to visit the array more than once.
