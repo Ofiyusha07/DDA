@@ -1,0 +1,26 @@
+The task is to calculate the sum of all node values that are between low and high.
+For example, if low = 7 and high = 15, I need to add only the values that are inside this range.
+
+I used recursion to check the nodes in the tree.
+First, I check if the current node is null. If it is null, I return 0.
+Then I check the current value:
+If it is between low and high, I add it to the sum.
+If the current value is bigger than low, I check the left subtree.
+If the current value is smaller than high, I check the right subtree.
+This helps me skip some parts of the tree that cannot contain values from the range.
+
+The difficult part was understanding when I should go left or right.
+At first, I thought I needed to visit every node. But then I understood that BST allows me to skip some branches.
+I also needed to make sure that values equal to low or high are included. That is why I used >= and <=.
+
+Time Complexity: O(n)
+In the worst case, the algorithm may visit every node in the tree.
+Here, n is the total number of nodes.
+Because I skip some branches, the actual number of visited nodes can be smaller.
+Space Complexity: O(h)
+I use recursion, so each function call takes space in the call stack.
+The maximum number of calls depends on the height of the tree.
+
+The solution already uses the BST structure to skip unnecessary branches.
+A possible improvement is to keep pruning branches more carefully.
+
