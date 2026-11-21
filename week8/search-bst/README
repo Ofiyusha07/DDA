@@ -1,0 +1,26 @@
+The task is to find a given value in a Binary Search Tree (BST).
+If the value exists, we return the node. If it does not exist, we return null.
+
+I used a while loop to search for the value.
+First, I check the root node.
+- If the value is equal to the current node, I return it.
+- If the value is smaller, I move to the left child.
+- If the value is bigger, I move to the right child.
+- If the node is null, it means the value was not found.
+
+
+At first, I needed to understand which direction to choose when searching.
+I learned that in a BST, smaller values are on the left and bigger values are on the right. This makes searching easier because I do not need to check every node.
+I also considered what happens when the value does not exist. In this case, the loop stops when the current node becomes null.
+
+
+Time Complexity: O(h)
+The algorithm follows only one path from the root to a node. It does not visit the whole tree.
+Here, h is the height of the tree.
+In the worst case, the tree can be unbalanced, so the complexity becomes O(n).
+Space Complexity: O(1)
+I only use a few variables and do not create another data structure.
+
+The solution is already efficient because it uses the BST structure.
+If the tree is balanced, searching takes O(log n) time.
+To improve the worst case, the tree should be balanced. This keeps its height smaller.
